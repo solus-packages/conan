@@ -1,0 +1,39 @@
+name       : conan
+version    : 1.18.2
+release    : 1
+source     :
+    - https://github.com/conan-io/conan/archive/1.18.2.tar.gz : 5e53bd4e1db4581502b1e327840a458c830d2322b1b9d20630212e061d706390
+license    : MIT
+component  : programming.tools
+summary    : A distributed, open source, C/C++ package manager.
+description: |
+    A distributed, open source, C/C++ package manager.
+builddeps  :
+    - pkgconfig(python3)
+rundeps    :
+    - pygments
+    - pylint
+    - python-astroid
+    - python-bottle
+    - python-colorama
+    - python-dateutil
+    - python-deprecation
+    - python-distro
+    - python-fasteners
+    - python-future
+    - python-jinja
+    - python-monotonic
+    - python-node-semver
+    - python-patch
+    - python-pluginbase
+    - python-pyjwt
+    - python-requests
+    - python-six
+    - python-tqdm
+    - pyyaml
+setup      : |
+    %patch -Np1 < $pkgfiles/path_reqs.patch
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
