@@ -1,6 +1,6 @@
 name       : conan
 version    : 1.18.2
-release    : 1
+release    : 2
 source     :
     - https://github.com/conan-io/conan/archive/1.18.2.tar.gz : 5e53bd4e1db4581502b1e327840a458c830d2322b1b9d20630212e061d706390
 license    : MIT
